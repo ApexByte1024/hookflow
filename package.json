@@ -1,0 +1,29 @@
+{
+  "name": "hookflow",
+  "version": "1.0.0",
+  "description": "A reliable distributed webhook delivery engine",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc",
+    "worker": "tsx src/workers/delivery.worker.ts",
+    "test": "jest"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.5",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.0.0",
+    "jest": "^30.2.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.2"
+  }
+}
